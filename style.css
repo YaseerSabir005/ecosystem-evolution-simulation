@@ -1,0 +1,179 @@
+/* General Body and Font Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f1f5f9; /* slate-100 */
+    color: #334155; /* slate-700 */
+    margin: 0;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header Styling */
+.main-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700;
+    color: #1e293b; /* slate-800 */
+}
+
+.main-header p {
+    font-size: 1.125rem; /* text-lg */
+    color: #64748b; /* slate-500 */
+    margin-top: 0.5rem;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .main-content {
+        flex-direction: row;
+    }
+}
+
+/* Controls Panel */
+.controls-panel {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+@media (min-width: 1024px) {
+    .controls-panel {
+        width: 25%;
+    }
+}
+
+.controls-panel h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.control-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.control-buttons button {
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-btn { background-color: #3b82f6; } /* blue-500 */
+#start-btn:hover { background-color: #2563eb; } /* blue-600 */
+#stop-btn { background-color: #ef4444; } /* red-500 */
+#stop-btn:hover { background-color: #dc2626; } /* red-600 */
+#reset-btn { background-color: #64748b; } /* slate-500 */
+#reset-btn:hover { background-color: #475569; } /* slate-600 */
+
+.parameters div {
+    margin-bottom: 1rem;
+}
+
+.parameters label {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    color: #475569; /* slate-600 */
+}
+
+.parameters input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.parameters span {
+    font-size: 0.875rem;
+    color: #64748b; /* slate-500 */
+}
+
+
+/* Simulation Grid */
+.grid-wrapper {
+    flex-grow: 1;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+#grid-container {
+    display: grid;
+}
+
+.grid-cell {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #e2e8f0; /* slate-200 */
+}
+
+.grass { background-color: #4ade80; } /* green-400 */
+.herbivore { background-color: #3b82f6; } /* blue-500 */
+.carnivore { background-color: #ef4444; } /* red-500 */
+
+
+/* Statistics Display */
+.stats-display {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.stats-display h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.stats-grid p:first-child {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600;
+    color: #475569; /* slate-600 */
+}
+
+.stats-grid p:last-child {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+}
+
+#time-steps { color: #3b82f6; } /* blue-500 */
+#herbivore-count { color: #22c55e; } /* green-500 */
+#carnivore-count { color: #ef4444; } /* red-500 */
